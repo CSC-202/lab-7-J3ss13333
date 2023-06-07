@@ -3,7 +3,45 @@
 ### get huffman to work first here, then make it into a function for the analysis
 
 # the input, what we want to encode
-message: str = 'Hello there'
+msg: str = '''Transmission third world war third round a decade of the weapon of sound above ground no shelter if you\'re lookin\' for shade I lick shots at the brutal charade as the polls close like a casket on truth devoured a silent play in the shadow of power a spectacle monopolized the camera\'s eyes on choice disguised was it cast for the mass who burn and toil? Or for the vultures who thirst for blood and oil? yes a spectacle monopolized They hold the reins and stole your eyes Or the fistagons
+The bullets and bombs
+Who stuff the banks
+Who staff the party ranks
+More for Gore or the son of a drug lord
+None of the above fuck it cut the cord
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio
+Contact I highjacked the frequencies
+Blockin\' the beltway
+Move on D.C.
+Way past the days of Bombin\' M.C.\'s
+Sound off Mumia gwan be free
+Who gottem yo check the federal file
+All you pen devils know the trial was vile
+An army of pigs try to silence my style
+Off \'em all out that box
+It\'s my radio dial
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+It has to start somewhere, it has to start sometime
+What better place than here, what better time than now?
+All hell can\'t stop us now
+All hell can\'t stop us now
+All hell can\'t stop us now
+All hell can\'t stop us now
+All hell can\'t stop us now All hell can\'t stop us now'''
 
 # the output, should be all 0's and 1s
 result: str = str()
@@ -20,38 +58,56 @@ coding: dict = dict()   # key  -> a letter
                         # item -> a binary encoding
 
 
-# STEP 0 - TODO
+# STEP 0 
 ## defining our data structures
 class Node: # NOT given to students
-    # TODO
-    
-    def __init__(self):
-        return
+    frequency: int
+    letter: str
+    left: any
+    right: any
+
+    def __init__(self, letter, frequency, left=None, right=None):
+        self.left = left
+        self.right = right
+        self.letter = letter
+        self.frequency = frequency
+        
+
+    def __str__(self):
+        return "Letter: " + str(self.letter) + ", Frequency: " + str(self.frequency) + ", Left: (" + str(self.left) + "), Right: (" + str(self.right) + ")"
 
 ## defining operations
 ### recursively traverses the huffman tree to record the codes
 def retrieve_codes(v: Node, path: str=''):
     global coding
-    if v.letter != None: # if 'TODO': # TODO
-        coding[v.letter] = None # TODO
+    if v.letter != None: 
+        coding[v.letter] = path
     else:
-        retrieve_codes(None, None) # TODO
-        retrieve_codes(None, None) # TODO
+        retrieve_codes(v.left, path+"0")
+        retrieve_codes(v.right, path+"1")
 
 # STEP 1
-## counting the frequencies - TODO
+## counting the frequencies 
+msg = msg.lower()
+for letter in msg:
+    if letter not in freq.keys():
+        freq[letter] = 1
+    else:
+        freq[letter] += 1
 
 
 # STEP 2
-## initialize the nodes - TODO
+## initialize the nodes
 nodes = list()
-nodes.append(Node(0, 'a'))
+for (letter, freq) in freq.items():
+    nodes.append(Node(letter, freq))
 
-# STEP 3 - TODO
+
+# STEP 3 
 ## combine each nodes until there's only one item in the nodes list
 while len(nodes) > 1:
     ## sort based on weight
-    nodes.sort(key=lambda x: x.weight, reverse=True)
+    nodes.sort(key=lambda x: x.frequency, reverse=True)
 
     ## get the first min
     min_a: Node = nodes.pop()
@@ -60,7 +116,7 @@ while len(nodes) > 1:
     min_b: Node = nodes.pop()
 
     ## combine the two
-    combined: Node = None # TODO
+    combined = Node(letter=None, frequency=(min_a.frequency + min_b.frequency), left=min_b, right=min_a)
 
     ## put the combined nodes back in the list of nodes
     nodes.append(combined)
@@ -69,11 +125,17 @@ while len(nodes) > 1:
 ## reconstruct the codes
 huff_root = nodes[0]
 retrieve_codes(huff_root)
-result: str = str() # TODO (hint coding[letter] -> code)
+print(coding)
+
+result = ""
+for letter in msg:
+    result += coding[letter]
+
+print(result)
 
 # STEP 5
 ## analyize compression performance
-n_original_bits: int = len(message) * 8
+n_original_bits: int = len(msg) * 8
 n_encoded_bits: int = len(result)
 compression_ratio: float = (1 - n_encoded_bits / n_original_bits) * 100
 

@@ -5,18 +5,155 @@
 import matplotlib.pyplot as plt
 
 # DATA - lyrics
-POKEMON_LYRICS = 'I wanna be the very best. Like no one ever was. To catch them is my real test. To train them is my cause. I will travel across the land. Searching far and wide. Each Pokemon to understand. The power that\'s inside. (Pokemon, gotta catch \'em all.) Its you and me. I know it\'s my destiny. (Pokemon.) Oh, you\'re my best friend. In a world we must defend. (Pokemon, gotta catch \'em all.) A heart so true. Our courage will pull us through. You teach me and I\'ll teach you. Pokemon. (gotta catch \'em all.) Gotta catch \'em all. Yeah. Every challenge along the way. With courage I will face. I will battle every day. To claim my rightful place. Come with me, the time is right. There\'s no better team. Arm in arm we\'ll win the fight. It\'s always been our dream. (Pokemon, gotta catch \'em all.) Its you and me. I know it\'s my destiny (Pokemon.) Oh, you\'re my best friend. In a world we must defend. (Pokemon, gotta catch \'em all.) A heart so true. Our courage will pull us through. You teach me and I\'ll teach you. Pokemon (gotta catch \'em all.) Gotta catch \'em all. Gotta catch \'em all. Gotta catch \'em all. Gotta catch \'em all. Yeah! (Pokemon, gotta catch \'em all). Its you and me. I know it\'s my destiny. (Pokemon) Oh, you\'re my best friend. In a world we must defend. (Pokemon, gotta catch \'em all.) A heart so true. Our courage will pull us through. You teach me and I\'ll teach you Pokemon. (gotta catch \'em all). Gotta catch \'em all. (Pokemon)'
-JIGGLE_JIGGLE = 'You have to have something that sticks. You have to have something that\'s monumental. When you walk out on stage, that\'s been monumental. (Jiggle, jiggle) Can you remember any of the rap that you did? My money don\'t jiggle, jiggle, it folds. I like to see you wiggle, wiggle, for sure. It makes me want to dribble, dribble, you know. Riding in my Fiat, you really have to see it. Six feet two in a compact, no slack. But luckily the seats go back. I got a knack to relax in my mind. Sipping some red, red wine. I sip booze from chalices, holding my palaces. Crib is so crampy suckers suffer from paralysis. Rhymes, I write them in the castle. You try to diss me and pretty soon your ass. Will squat in a cell \'cause I can tell you it\'s illegal. Treason, that\'s the reason I\'m regal. You do the time for the crime of lèse-majesté. And **** the police \'cause they can\'t arrest me. (They can\'t arrest me, they can\'t arrest me). (I like to see you wiggle, it makes me dribble, fancy a fiddle?). My money don\'t jiggle, jiggle, it folds. I like to see you wiggle, wiggle, for sure. It makes me want to dribble, dribble, you know. Riding in my Fiat, you really have to see it. Six feet two in a compact, no slack. But luckily the seats go back. I got a knack to relax in my mind. Sipping some red, red wine. (I like to see you wiggle, it makes me dribble, fancy a fiddle?). (I like to see you wiggle, it makes me dribble, fancy a fiddle?). (I like to see you wiggle, it makes me dribble, fancy a fiddle?). (I like to see you wiggle, it makes me dribble, fancy a fiddle?)'
-ALPHABET = 'Now it\'s time for our wrap up. Let\'s give it everything we\'ve got. Ready, begin. Artificial amateurs aren\'t at all amazing. Analytically, I assault, animate things. Broken barriers bounded by the bomb beat. Buildings are broken, basically I\'m bombarding. Casually create catastrophes, casualties. Canceling cats got their canopies collapsing. Detonate a dime of dank daily doin\' dough. Demonstrations, Don Dada on the down low. Eatin\' other editors with each and every energetic. Epileptic episode, elevated etiquette. Furious fat fabulous fantastic. Flurries of funk felt feeding the fanatics. Imitators idolize, I intimidate. In a instant, I\'ll rise in a irate state. Juiced on my jams like jheri curls, jockin\' joints. Justly, it\'s just me, writin\' my journals. Kindly I\'m kindling all kinds of ink on. Karate kick type Brits in my kingdom. Let me live a long life, lyrically lessons is. Learned lame louses just lose to my livery. My mind makes marvelous moves, masses. Marvel and move, many mock what I\'ve mastered.  Niggas nap knowin\' I\'m nice naturally. Knack, never lack, make noise nationally.  Operation, opposition, off, not optional. Out of sight, out of mind, wide beaming opticals. Perfected poem, powerful punchlines. Pummeling petty powder puffs in my prime. Quite quaint quotes keep quiet it\'s Quannum Quarrelers ain\'t got a quarter of what we got, uh. Really raw raps, risin\' up rapidly. Riding the rushing radioactivity. Super scientifical sound search sought. Silencing super fire saps that are soft. Tales ten times talented, they\'re too tough. Take that, challengers, get a tune up. Universal, unique untouched. Unadulterated, the raw uncut. Verb vice Lord victorious valid. Violate vibes that are vain make \'em vanished. Why I\'m all well, would a wise wordsmith. Just weaving up words weeded up, on my work shift. Xerox, my X-ray-diation holes extra large. X-height letters and xylophone tones.'
-
+GUERILLA_RADIO = '''Transmission third world war third round a decade of the weapon of sound above ground no shelter if you\'re lookin\' for shade I lick shots at the brutal charade as the polls close like a casket on truth devoured a silent play in the shadow of power a spectacle monopolized the camera\'s eyes on choice disguised was it cast for the mass who burn and toil? Or for the vultures who thirst for blood and oil? yes a spectacle monopolized They hold the reins and stole your eyes Or the fistagons
+The bullets and bombs
+Who stuff the banks
+Who staff the party ranks
+More for Gore or the son of a drug lord
+None of the above fuck it cut the cord
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio
+Contact I highjacked the frequencies
+Blockin\' the beltway
+Move on D.C.
+Way past the days of Bombin\' M.C.\'s
+Sound off Mumia gwan be free
+Who gottem yo check the federal file
+All you pen devils know the trial was vile
+An army of pigs try to silence my style
+Off \'em all out that box
+It\'s my radio dial
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+Lights out
+Guerrilla Radio, turn that shit up
+It has to start somewhere, it has to start sometime
+What better place than here, what better time than now?
+All hell can\'t stop us now
+All hell can\'t stop us now
+All hell can\'t stop us now
+All hell can\'t stop us now
+All hell can\'t stop us now All hell can\'t stop us now'''
+CULT_OF_DIONYSUS = '''Yesterday I heard you say
+Your lust for life has gone away
+It got me thinking, I think I feel a similar way
+And that\'s sad (that's sad)
+That\'s sad
+So let's make a decision, start a new religion
+Yeah, we're gonna build a temple to our love
+Orgiastic dances, nymphs in trances
+Yeah, we\'ll be the envy of the gods above
+I'm feeling devious
+You\'re looking glamorous
+Let\'s get mischievous
+And polyamorous
+Wine and women and wonderful vices
+Welcome to the cult of Dionysus
+We could take a Holiday in the month of May
+Run free and play in fields of flowers
+Pass the hours, making love is how we\'ll pray
+Or start a secret society for the wild and free
+Our ideology is You can do what you want
+Too much is never enough
+We are the Life, we are the light
+We are the envy of the gods above
+I\'m feeling devious
+You\'re looking glamorous
+Let\'s get mischievous
+And polyamorous
+Wine and women and wonderful vices
+Welcome to the cult of Dionysus
+Run, run, run away
+Just take my hand and we\'ll abandon this world
+We\'ll wash those tears away
+You\'re young and beautiful, and I\'ll love you always
+We got no time for pain
+When it\'s just you and me in ecstasy
+What is with the world today
+The wicked games that people play
+The wars, the greed they waste away
+Yeah, it\'s sad (it\'s sad)
+It\'s sad
+So let\'s spread the word across the land
+Yeah, one by one, baby hand in hand
+We got a mission of hope
+We got a message of love
+Soon everybody, everywhere will be the envy of the gods above
+I\'m feeling devious
+You\'re looking glamorous
+Let\'s get mischievous
+And polyamorous
+Wine and women and wonderful vices
+Welcome to the cult of Dionysus
+I'm feeling devious
+You\'re looking glamorous
+Let\'s get mischievous (run, run, run away)
+And polyamorous
+Wine and women and wonderful vices
+Welcome to the cult of Dionysus'''
+ITS_NOT_A_FASHION_STATEMENT_ITS_A_DEATHWISH = '''For what you did to me
+And what I\'ll do to you
+You get, what everyone else gets
+You get a lifetime
+Let\'s go
+Do you remember that day when we met?
+You told me this gets harder, well, it did
+Been holding on forever
+Promise me that when I've gone
+You\'ll kill my enemies
+The damage you\'ve inflicted, temporary wounds
+I'm coming back from the dead
+And I\'ll take you home with me
+I\'m taking back the life you stole
+We never got that far
+This helps me to think all through the night
+Bright lights that won't kill me now or tell me how
+Just you and I, your starless eyes remain
+Hip hip hooray for me, you talk to me
+But would you kill me in my sleep
+Lay still like the dead
+From the razor to the rosary
+We could lose ourselves
+And paint these walls in pitchfork red
+I will avenge my ghost with every breath I take
+I\'m coming back from the dead
+And I\'ll take you home with me
+I\'m taking back the life you stole
+This hole that you put me in
+Wasn\'t deep enough
+And I\'m climbing out right now
+You\'re running out of places to hide from me
+When you go
+Just know that I will remember you
+If living was the hardest part
+We\'ll then one day be together
+And in the end we\'ll fall apart
+Just like the leaves changing colors
+And then I will be with you
+I will be there one last time now
+When you go
+Just know that I will remember you
+I lost my fear of falling
+I will be with you, I will be with you'''
 # DATA - mantras
-GREEN_LATTERN = 'In brightest day, in blackest night, No evil shall escape my sight. Let those who worship evil\'s might, Beware my power... Green Lantern\'s light!'
-JEDI_CODE = 'Emotion, yet peace. Ignorance, yet knowledge. Passion, yet serenity. Chaos, yet harmony. Death, yet the Force.'
-SITH_CODE = 'Peace is a lie. There is only Passion. Through Passion, I gain Strength. Through Strength, I gain Power. Through Power, I gain Victory. Through Victory my chains are Broken. The Force shall free me.'
+AMIDA_NEMBUTSU = 'Namu Amida Butsu'
+BRISKET_BEATS_YOU_TO_DEATH = "Sorry, no installment plan! Pay up, please!"
+HOID_QUOTE = "Aim for the sun. That way if you miss, at least your arrow will fall far away, and the person it kills will likely be someone you don\'t know."
+
 
 # the input, what we want to encode
-def huffman(message:str) -> float:
-    message = message.upper()
+def huffman(msg:str) -> float:
+    msg = msg.upper()
 
     # the output, should be all 0's and 1s
     result: str = str()
@@ -29,29 +166,88 @@ def huffman(message:str) -> float:
     nodes: list = list() 
 
     # for storing the code for each letter
-    coding: dict = dict()   # key  -> a letter
+    global coding 
+    coding = dict()   # key  -> a letter
                             # item -> a binary encoding
 
 
-    # STEP 0
+    # STEP 0 
     ## defining our data structures
+    class Node: # NOT given to students
+        frequency: int
+        letter: str
+        left: any
+        right: any
+
+        def __init__(self, letter, frequency, left=None, right=None):
+            self.left = left
+            self.right = right
+            self.letter = letter
+            self.frequency = frequency
+            
+
+        def __str__(self):
+            return "Letter: " + str(self.letter) + ", Frequency: " + str(self.frequency) + ", Left: (" + str(self.left) + "), Right: (" + str(self.right) + ")"
+
     ## defining operations
+    ### recursively traverses the huffman tree to record the codes
+    def retrieve_codes(v: Node, path: str=''):
+        coding
+        if v.letter != None: 
+            coding[v.letter] = path
+        else:
+            retrieve_codes(v.left, path+"0")
+            retrieve_codes(v.right, path+"1")
 
     # STEP 1
-    ## counting the frequencies
+    ## counting the frequencies 
+    msg = msg.lower()
+    for letter in msg:
+        if letter not in freq.keys():
+            freq[letter] = 1
+        else:
+            freq[letter] += 1
+
 
     # STEP 2
     ## initialize the nodes
+    nodes = list()
+    for (letter, freq) in freq.items():
+        nodes.append(Node(letter, freq))
 
-    # STEP 3
+
+    # STEP 3 
     ## combine each nodes until there's only one item in the nodes list
+    while len(nodes) > 1:
+        ## sort based on weight
+        nodes.sort(key=lambda x: x.frequency, reverse=True)
+
+        ## get the first min
+        min_a: Node = nodes.pop()
+
+        ## get the second min
+        min_b: Node = nodes.pop()
+
+        ## combine the two
+        combined = Node(letter=None, frequency=(min_a.frequency + min_b.frequency), left=min_b, right=min_a)
+
+        ## put the combined nodes back in the list of nodes
+        nodes.append(combined)
 
     # STEP 4
     ## reconstruct the codes
+    huff_root = nodes[0]
+    retrieve_codes(huff_root)
+
+    result = ""
+    for letter in msg:
+        result += coding[letter]
+
+    print(result)
 
     # STEP 5
     ## analyize compression performance
-    n_original_bits: int = len(message) * 8
+    n_original_bits: int = len(msg) * 8
     n_encoded_bits: int = len(result)
     compression_ratio: float = 1 - (n_encoded_bits / n_original_bits)
 
@@ -59,52 +255,66 @@ def huffman(message:str) -> float:
 
 # LYRICS
 plt.subplot(2, 1, 1)
-plt.suptitle('Lab 7 - Stapleton Analyzing Huffman')
-
+plt.suptitle('Lab 7 - Terlato Analyzing Huffman')
+plt.gcf().supylabel("Compression %")
+plt.gcf().supxlabel("Length of Message")
 MAX_N: int = int(128 * 3 / 2)
+xsize = [i for i in range(1, MAX_N)]
 
 # PLOT 1
-## POKEMON
+## Guerilla Radio
 ratios: list = list()
 for i in range(1, MAX_N):
-    sub_message = POKEMON_LYRICS[0:i]
+    sub_message = GUERILLA_RADIO[0:i]
     _, _, ratio = huffman(sub_message)
     ratios.append(ratio)
+plt.plot(xsize, ratios, linestyle="dashdot", linewidth=2)
 
-## JIGGLE JIGGLE
-ratios: list = list()
-for i in range(1, MAX_N):
-    sub_message = JIGGLE_JIGGLE[0:i]
-    _, _, ratio = huffman(sub_message)
-    ratios.append(ratio)
 
-## ALPHABET
+## Cult Of Dionysus
 ratios: list = list()
 for i in range(1, MAX_N):
-    sub_message = ALPHABET[0:i]
+    sub_message = CULT_OF_DIONYSUS[0:i]
     _, _, ratio = huffman(sub_message)
     ratios.append(ratio)
+plt.plot(xsize, ratios, linestyle="dashdot", linewidth=2)
+
+## It's Not A Fashion Statement It's A Deathwish
+ratios: list = list()
+for i in range(1, MAX_N):
+    sub_message = ITS_NOT_A_FASHION_STATEMENT_ITS_A_DEATHWISH[0:i]
+    _, _, ratio = huffman(sub_message)
+    ratios.append(ratio)
+plt.plot(xsize, ratios, linestyle="dashdot", linewidth=2)
+plt.legend(["Guerilla Radio (n=" + str(len(GUERILLA_RADIO)) + ")", "The Cult of Dionysus (n=" + str(len(CULT_OF_DIONYSUS)) + ")", "It\'s Not a Fashion Statement It\'s a Deathwish (n=" + str(len(ITS_NOT_A_FASHION_STATEMENT_ITS_A_DEATHWISH)) + ")"])
+
 
 # PLOT 2
 plt.subplot(2, 1, 2)
 
-## SITH CODE
+## Amida's Nembutsu
 ratios: list = list()
 for i in range(1, MAX_N):
-    sub_message = SITH_CODE[0:i]
+    sub_message = AMIDA_NEMBUTSU[0:i]
     _, _, ratio = huffman(sub_message)
     ratios.append(ratio)
+plt.plot(xsize, ratios, linestyle="dashdot", linewidth=2)
 
-## GREEN LATERN'S OATH
+## Bridget Victory Line
 ratios: list = list()
 for i in range(1, MAX_N):
-    sub_message = GREEN_LATTERN[0:i]
+    sub_message = BRISKET_BEATS_YOU_TO_DEATH[0:i]
     _, _, ratio = huffman(sub_message)
     ratios.append(ratio)
+plt.plot(xsize, ratios, linestyle="dashdot", linewidth=2)    
 
-## JEDI CODE
+## Hoid Quote
 ratios: list = list()
 for i in range(1, MAX_N):
-    sub_message = JEDI_CODE[0:i]
+    sub_message = HOID_QUOTE[0:i]
     _, _, ratio = huffman(sub_message)
     ratios.append(ratio)
+plt.plot(xsize, ratios, linestyle="dashdot", linewidth=2)    
+plt.legend(["Amida\'s Nembutsu (n=" + str(len(AMIDA_NEMBUTSU)) + ")", "Bridget Voice Line Guilty Gear Strive (n=" + str(len(BRISKET_BEATS_YOU_TO_DEATH)) + ")", "Hoid Quote (n=" + str(len(HOID_QUOTE)) + ")"])
+
+plt.show()
